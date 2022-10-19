@@ -1,0 +1,22 @@
+class Compute 
+{
+    static pair getMinMax(long a[], long n)  
+    {
+        long mx = Integer.MIN_VALUE;
+        long mn = Integer.MAX_VALUE;
+        
+        for(int i = 0; i < n; i++)
+        {
+            if(a[i] < mn)
+            {
+                mn = a[i];
+            }
+            if(a[i] > mx)
+            {
+                mx = a[i];
+            }
+        }
+        
+        return new pair(mn, mx);
+    }
+}
