@@ -1,0 +1,39 @@
+//c++
+string reverseWord(string str){
+    int i = 0;
+    int j = str.size()-1;
+    
+    while(i <= j)
+    {
+        char temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+        
+        i++;
+        j--;
+    }
+    
+    return str;
+}
+
+
+
+//java
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        int j = str.length()-1;
+        String s = "";
+        while(j >= 0)
+        {
+            char temp = str.charAt(j);
+            s += temp;
+            
+            j--;
+        }
+        return s;
+    }
+}
